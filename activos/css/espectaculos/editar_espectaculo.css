@@ -1,0 +1,150 @@
+
+/* General layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.titulo {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Form labels and inputs */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="time"],
+form input[type="number"],
+form input[type="file"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Textarea */
+form textarea {
+    resize: vertical;
+}
+
+/* Error and flash messages */
+.error,
+.mensaje-flash {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.error {
+    background-color: #ffe0e0;
+    color: #a00;
+}
+
+.mensaje-flash {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Image preview */
+.imagen-actual {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.imagen-actual img {
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Buttons */
+.botones-finales {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.boton-editar,
+.boton-volver {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-volver {
+    background-color: #6c757d;
+}
+
+.boton-editar:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+}
+
+.boton-volver:hover {
+    background-color: #5a6268;
+    transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .main-content {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .botones-finales {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .boton-editar,
+    .boton-volver {
+        width: 100%;
+        text-align: center;
+    }
+
+    .imagen-actual img {
+        max-width: 300px;
+    }
+}
